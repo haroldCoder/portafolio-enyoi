@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav{
+  padding: 12px 0;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+}
+
+.animate-typewriter {
+  animation: typewriter 0.5s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+  display: inline-block;
+  overflow: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-padding-top: 100px; /* Altura del encabezado */
+}
+
+.main > .target {
+  transition: all 1s ease;
+}
+
+.main > .target:target {
+  transform: scale(1.2);
+}
+.icon-social{
+  cursor: pointer;
+}
+.social{
+  width: 100%;
+  padding: 10px;
+  background: #b4b4b4;
+  transition: all 0.5s ease;
+  border-radius: 10px; 
+}
