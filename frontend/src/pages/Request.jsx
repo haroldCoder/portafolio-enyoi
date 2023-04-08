@@ -6,7 +6,7 @@ function Solicitudes() {
 
   useEffect(() => {
     axios
-      .get("/api/solicitudes")
+      .get("http://localhost:4000/api/solicitudes")
       .then((response) => setSolicitudes(response.data))
       .catch((error) => console.error(error));
   }, []);

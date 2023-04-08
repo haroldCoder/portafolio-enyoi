@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const app = express();
 
 // middleware
@@ -11,20 +11,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'tu-contraseña',
-  database: 'solicitudes'
+  password: '2364144',
+  database: 'request'
 });
 
 db.connect((err) => {
-  if (err) {
-    throw err;
-  }
+  if(err) throw err;
   console.log('Conexión exitosa a la base de datos');
 });
 
-// definir rutas
-app.get('/solicitudes', (req, res) => {
-  const sql = 'SELECT * FROM solicitudes';
+app.get('/api/solicitudes', (req, res) => {
+  const sql = 'SELECT * FROM request';
   db.query(sql, (err, result) => {
     if (err) {
       throw err;
@@ -33,16 +30,14 @@ app.get('/solicitudes', (req, res) => {
   });
 });
 
-app.post('/solicitudes', (req, res) => {
-  const nuevaSolicitud = req.body;
-  const sql = 'INSERT INTO solicitudes SET ?';
-  db.query(sql, nuevaSolicitud, (err, result) => {
-    if (err) {
-      throw err;
-    }
-    res.send('Solicitud creada con éxito');
-  });
+app.post('/api/solicitudes', (req, res) => {
+  const {nombre, correo, tel, solicitud, comentario} = req.body;
+    db.query(`INSERT INTO request VALUES ("${nombre}", "${correo}", ${tel}, "${solicitud}", "${comentario}")`, (result, err)=>{
+      if(err) throw err;
+      console.log("request add");
+      res.send("request with 200");
+    })
 });
 
 // iniciar servidor
-app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
+app.listen(4000, () => console.log('Servidor iniciado en el puerto 4000'));
