@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
 
-    const [text, setText] = React.useState(['Inicio', 'Proyectos', 'Tecnologias', 'Redes Sociales', 'Contactame']);
+    const [text, setText] = React.useState(['Inicio', 'Proyectos', 'Tecnologias', 'Redes Sociales', 'Contactame', "Login"]);
     const [open, setOpen] = React.useState(false);
 
     const Search = styled('div')(({ theme }) => ({
@@ -84,7 +84,7 @@ export default function Navbar(props) {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Buscar…"
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
