@@ -9,6 +9,8 @@ import Contact from './pages/Contact'
 import Social from './components/Social'
 import LoginPage from './pages/Login'
 import Request from './pages/Request'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   const [nav, setNav] = useState('');
@@ -31,6 +33,7 @@ function App() {
           <Route exact path="/Login" element={<LoginPage nav={setNav} isLoggedIn={isLoggedIn} setIsloggedIn={setIsloggedIn}/>} />
           <Route path='/solicitudes' element={isLoggedIn ? <Request nav={setNav} /> : null} />
         </Routes>
+        <ToastContainer/>
       </div>
     </BrowserRouter>
   );

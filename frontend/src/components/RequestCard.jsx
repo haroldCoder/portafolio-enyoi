@@ -2,11 +2,13 @@ import React from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 export default function RequestCard(props) {
 
   const DeleteRequest = (id) =>{
-    axios.delete("http://localhost:4000/api/solicitudes/"+id).then((res)=>{console.log(res)})
+    axios.delete("http://localhost:4000/api/solicitudes/"+id).then((res)=>{console.log(res); toast.info('Solicitud eliminada')}).catch((err)=>{toast.error("Ocurrio un error")});
+
   }
 
   return (
@@ -24,7 +26,7 @@ export default function RequestCard(props) {
             <button className='hover:bg-blue-400 rounded-full p-1' onClick={()=>{DeleteRequest(props.id)}}>
               <DeleteIcon color='primary'/>
             </button>
-            <button className='hover:bg-blue-400 rounded-full p-1'>
+            <button className='hover:bg-blue-400 rounded-full p-1' onClick={()=>{props.form(true); props.setId(props.id)}}>
               <EditIcon color='primary'/>
             </button>
           </div>

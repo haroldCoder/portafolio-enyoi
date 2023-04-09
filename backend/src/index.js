@@ -36,7 +36,7 @@ app.post('/api/solicitudes', (req, res) => {
   const {nombre, correo, tel, solicitud, comentario} = req.body;
     db.query(`INSERT INTO request(nombre, correo, tel, solicitud, comentario) VALUES ("${nombre}", "${correo}", "${tel}", "${solicitud}", "${comentario}")`, (result, err)=>{
       if(err) console.log(err);;
-      console.log("request add");
+      console.log("request add", result);
       res.send("request with 200");
     })
 });
@@ -48,6 +48,17 @@ app.delete("/api/solicitudes/:id", (req, res) =>{
     if(err) throw err;
     console.log("request delete");
     res.send("solicitud eliminada");
+  })
+})
+
+app.put("/api/solicitudes/:id", (req, res) =>{
+  const {id} = req.params;
+  const {solicitud, comentario} = req.body;
+
+  db.query(`UPDATE request SET solicitud = "${solicitud}", comentario = "${comentario}" WHERE id = ${id}`, (err, re)=>{
+    if(err) throw err;
+    console.log("request update");
+    res.send("solicitud modificada");
   })
 })
 

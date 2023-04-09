@@ -41,3 +41,6 @@ body {
   transition: all 0.5s ease;
   border-radius: 10px; 
 }
+.blue-toast {
+  background-color: blue;
+}
