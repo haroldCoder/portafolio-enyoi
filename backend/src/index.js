@@ -1,9 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mysql = require('mysql2');
 const app = express();
 const cors = require("cors");
-const { default: connection } = require('./sql/conection');
 
 // middleware
 app.use(bodyParser.json());
