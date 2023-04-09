@@ -4,10 +4,10 @@ import ReactDOM from 'react-dom';
 import { render } from "react-dom";
 import { LinearProgress } from "@mui/material";
 
-class Card extends Component{
+class Card extends Component{ 
     name = ""
     cover = ""
-    type = ''
+    type = '';
     constructor(props){
         super(props);
         this.name = props.name;

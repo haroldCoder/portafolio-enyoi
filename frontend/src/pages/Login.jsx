@@ -3,14 +3,14 @@ import { useNavigate } from "react-router-dom";
 
 export default function LoginPage(props) {
   const navigate = useNavigate();
-  const handleLogin = () => {
+  const handleLogin = () => { {/* cuando se inicie sesion el prop de app.jsx isLoggedIn sera igual a true, para que la ruta privada sea accedida */}
     props.setIsloggedIn(true);
     
   };
   
   useEffect(()=>{
     if(props.isLoggedIn){
-      navigate("/solicitudes")
+      navigate("/solicitudes") // cuando el prop isLoggedIn sea true, inmediatamente sera redirigido a la ruta privada, para ver las solicitudes
     }
   })
   props.nav("Login")

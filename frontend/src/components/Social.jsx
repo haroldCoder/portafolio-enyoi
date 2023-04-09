@@ -10,7 +10,7 @@ export default function Social() {
         <a href="https://www.facebook.com/profile.php?id=100073088183904"><FacebookIcon className='icon-social' style={{fontSize: 60}} /></a>
         <a href="https://www.instagram.com/koder_alvarez/"><GitHubIcon className='icon-social' style={{fontSize: 60}} /></a>
         <a href="https://www.linkedin.com/in/harold-casta%C3%B1o-816180216/"><LinkedInIcon className='icon-social' style={{fontSize: 60}} /></a>
-        <a href="https://github.com/haroldCoder/"><LanguageIcon className='icon-social' style={{fontSize: 60}} /></a>
+        <a href="https://github.com/haroldCoder/"><LanguageIcon className='icon-social' style={{fontSize: 60}} /></a> {/* se pondra todos los iconos, de las redes sociales, con sus respectivos links */}
     </div>
   )
 }

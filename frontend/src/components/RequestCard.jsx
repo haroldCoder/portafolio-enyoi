@@ -4,7 +4,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-export default function RequestCard(props) {
+export default function RequestCard(props ) { {/* el props contendra todo lo que la api devuelva en la pagina Request */}
 
   const DeleteRequest = (id) =>{
     axios.delete("http://localhost:4000/api/solicitudes/"+id).then((res)=>{console.log(res); toast.info('Solicitud eliminada')}).catch((err)=>{toast.error("Ocurrio un error")});
@@ -23,7 +23,7 @@ export default function RequestCard(props) {
             <h4 className='text-gray-400 text-sm mt-2'>{props.comentario}. <p className='text-blue-500 mt-2'>{props.tel}</p></h4>
           </div>
           <div className='flex justify-evenly w-[20%] items-end'>
-            <button className='hover:bg-blue-400 rounded-full p-1' onClick={()=>{DeleteRequest(props.id)}}>
+            <button className='hover:bg-blue-400 rounded-full p-1' onClick={()=>{DeleteRequest(props.id)}}> {/* si se da click en el boton de eliminar, este llamara la funcion DeleteRequest, la cual hara una peticion delete a la api rest, con el id, que se le pase por el props */}
               <DeleteIcon color='primary'/>
             </button>
             <button className='hover:bg-blue-400 rounded-full p-1' onClick={()=>{props.form(true); props.setId(props.id)}}>

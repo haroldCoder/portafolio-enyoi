@@ -11,10 +11,10 @@ export default function FormRequest(props) {
         phone: '',
         request: '',
         comment: ''
-      });
-    const handleSubmit = (e) => {
+      }); {/* se creara un controlador que maneje el estado de los atributos, que me devolvera la api */}
+    const handleSubmit = (e) => { {/* cuando el formulario sea enviado se activara, este metodo */}
         e.preventDefault();
-        if(props.create == true){
+        if(props.create == true){ {/* si se le pasa algun prop-create en true lo que hara es una peticion post a la api con la informacion del estado */}
             axios.post("http://localhost:4000/api/solicitudes", {
                 "nombre": formData.name,
                 "correo": formData.email,
@@ -22,17 +22,17 @@ export default function FormRequest(props) {
                 "solicitud": formData.request,
                 "comentario": formData.comment
             }).then((res)=>{console.log(res); toast.success("Solicitud enviada")})
-            .catch((err)=>{toast.error("Ocurrio un error")});
+            .catch((err)=>{toast.error("Ocurrio un error")}); {/* si todo sale bien, impremira en la consola, lo que le envie la api, mas un toast osea mensaje flotante de tipo succes, si sale mal, sera al contrario */}
             setFormData(prev=>({
                 "name": "",
                 "email": "",
                 "phone": "",
                 "request": "",
                 "comment": ""
-            }))
+            })); {/* por ultimo los datos deben de volver a estar vacios */}
             
         }
-        else{
+        else{ {/* en caso de que no se le envie ninguna prop, asumira que debe hacer una peticion de modificar la solicitud */}
             axios.put("http://localhost:4000/api/solicitudes/"+props.id, {
                 "solicitud": formData.request,
                 "comentario": formData.comment
@@ -45,17 +45,18 @@ export default function FormRequest(props) {
                 "request": "",
                 "comment": ""
             }))
-            props.setForm(false);
+            props.setForm(false); {/* desde la pagina de request se enviara la orden para que quite la ventana emergente de modificar la solicitud */}
         }
     }
 
     const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-        ...prevState,
-        [name]: value
-    }));
+      const { name, value } = e.target; { /* se solicita el value y el name del target del input */}
+      setFormData(prevState => ({
+          ...prevState,
+          [name]: value
+      })); {/* se llenara de forma que sera lo que ya esta en el estado, mas el name y el value siguiente */}
     }
+
     const buttonVariants = {
         hover: {
           scale: 1.2,
@@ -65,7 +66,7 @@ export default function FormRequest(props) {
           scale: 0.9,
           transition: { duration: 0.6 },
         },
-      };
+      }; {/* se programara la animacion para el boton de frame-motion */}
 
   return (
     <form onSubmit={handleSubmit} className="max-w-lg mx-auto mt-12 bg-slate-800 p-8 rounded-md">

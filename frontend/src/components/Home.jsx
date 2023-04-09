@@ -6,24 +6,24 @@ import software from '../assets/software-engineering.png'
 import Social from './Social';
 
 export default function Home(props) {
-    const [currentText, setCurrentText] = useState('');
-    const [index, setIndex] = useState(0);
+    const [currentText, setCurrentText] = useState(''); //creamos el manejador para el texto de la animacion
+    const [index, setIndex] = useState(0); //manejador del indexador en la letra por letra
     const [text, setText] = useState("Desarrollador")
 
     props.nav("Inicio")
     useEffect(() => {
-        const interval = setInterval(() => {
-            if (index < text.length) {
-              setCurrentText(currentText + text[index]);
-              setIndex(index + 1); 
+        const interval = setInterval(() => { //setInterval de 200ml para la animacion
+            if (index < text.length) { // si el index es menor a el largo del texto
+              setCurrentText(currentText + text[index]); // el currentText sera igual a lo que almaceno anteriormente mas la letra del manejador text en posicion del indexador
+              setIndex(index + 1); // cada 200ml el index aumentara en uno 
             } 
             else{
-                text == "Desarrollador" ? setText("Full stack") : setText("Desarrollador")
-                setCurrentText('')
-                setIndex(0)  
+                text == "Desarrollador" ? setText("Full stack") : setText("Desarrollador") // en caso de que el index sea igual al largo del texto entonces se compara si el texto es Desarrollador se alterna a Full Stack y viceversa
+                setCurrentText('') //el currentText se formatea
+                setIndex(0) // y el index vuelve a ser 0 para repetir el bucle 
             }
           }, 200);
-          return () => clearInterval(interval);
+          return () => clearInterval(interval); // retorna el fin del setInterval
         }, [index, currentText, text]);
 
   return (
@@ -39,7 +39,7 @@ export default function Home(props) {
                         <h2 className='text-3xl text-white font-medium mb-4'>Harold Castaño</h2>      
                         <div className='text mt-8 flex'>
                             <h2 className='text-xl text-center mr-2'>Soy</h2>
-                            <h2 className='text-xl text-blue-500'>{currentText}.</h2>
+                            <h2 className='text-xl text-blue-500'>{currentText}.</h2> {/* se pone el curretText para que se ponga lo que es igual a lo que se almacena, en aquel estado */}
                         </div>
                     </div>
                 </div>
@@ -49,8 +49,8 @@ export default function Home(props) {
             </div>
             {
                 props.social == true ? 
-                <div className='w-[28%]'>
-                    <Social/>
+                <div className='w-[28%]'> 
+                    <Social/> {/* si el prop que me trae desde app.jsx es igual a true, se pintara lo que esta el el componente Social */}
                 </div>
                 : null
             }
