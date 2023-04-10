@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { motion } from "framer-motion";
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { API } from '../config';
 
 export default function FormRequest(props) {
 
@@ -15,7 +16,7 @@ export default function FormRequest(props) {
     const handleSubmit = (e) => { {/* cuando el formulario sea enviado se activara, este metodo */}
         e.preventDefault();
         if(props.create == true){ {/* si se le pasa algun prop-create en true lo que hara es una peticion post a la api con la informacion del estado */}
-            axios.post("http://localhost:4000/api/solicitudes", {
+            axios.post(API, {
                 "nombre": formData.name,
                 "correo": formData.email,
                 "tel": formData.phone,
@@ -33,7 +34,7 @@ export default function FormRequest(props) {
             
         }
         else{ {/* en caso de que no se le envie ninguna prop, asumira que debe hacer una peticion de modificar la solicitud */}
-            axios.put("http://localhost:4000/api/solicitudes/"+props.id, {
+            axios.put(API+props.id, {
                 "solicitud": formData.request,
                 "comentario": formData.comment
             }).then((res)=>{console.log(res); toast.success("Solicitud modificada")})
