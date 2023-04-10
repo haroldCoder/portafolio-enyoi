@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const cors = require("cors");
-const {PORT} = require("./config")
+const {DB_PORT} = require("./config")
 
 // middleware
 app.use(bodyParser.json());
