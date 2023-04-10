@@ -3,11 +3,12 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { API } from '../config';
 
 export default function RequestCard(props ) { {/* el props contendra todo lo que la api devuelva en la pagina Request */}
 
   const DeleteRequest = (id) =>{
-    axios.delete("http://localhost:4000/api/solicitudes/"+id).then((res)=>{console.log(res); toast.info('Solicitud eliminada')}).catch((err)=>{toast.error("Ocurrio un error")});
+    axios.delete(API+id).then((res)=>{console.log(res); toast.info('Solicitud eliminada')}).catch((err)=>{toast.error("Ocurrio un error")});
 
   }
 
