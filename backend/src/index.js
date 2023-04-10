@@ -14,4 +14,4 @@ app.use('/api/solicitudes', require("./routes/request-routes"));
 
 
 // iniciar servidor
-app.listen(4000, () => console.log('Servidor iniciado en el puerto 4000'));
+app.listen(PORT, () => console.log(`Servidor iniciado en el puerto ${PORT}`));
