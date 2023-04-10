@@ -4,6 +4,7 @@ import RequestCard from "../components/RequestCard";
 import { useLocation } from "react-router-dom";
 import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
 import FormRequest from "../components/FormRequest";
+import { API } from "../config";
 
 export default function Request(props) {
   const [solicitudes, setSolicitudes] = useState([]);
@@ -18,7 +19,7 @@ export default function Request(props) {
       document.querySelector("body").style.background = "#000";
     }
     axios
-      .get("http://localhost:4000/api/solicitudes")
+      .get(API)
       .then((response) => setSolicitudes(response.data))
       .catch((error) => console.error(error));
   }); // se hace uso del useMemo para traer de la api los datos de todas las solicitudes existentes y se guarda en el controlador solicitudes
