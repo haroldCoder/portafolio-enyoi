@@ -39,13 +39,13 @@ export default function Social(props) {
       <motion.a className='bg-white rounded-full' href="https://www.facebook.com/profile.php?id=100073088183904" variants={iconVariants}>
         <FacebookIcon className="icon-social" style={{ fontSize: 60 }} />
       </motion.a>
-      <motion.a className='bg-white rounded-full' href="https://www.instagram.com/koder_alvarez/" variants={iconVariants}>
+      <motion.a className='bg-white rounded-full' href="https://github.com/haroldCoder/" variants={iconVariants}>
         <GitHubIcon className="icon-social" style={{ fontSize: 60 }} />
       </motion.a>
       <motion.a className='bg-white rounded-full' href="https://www.linkedin.com/in/harold-casta%C3%B1o-816180216/" variants={iconVariants}>
         <LinkedInIcon className="icon-social" style={{ fontSize: 60 }} />
       </motion.a>
-      <motion.a className='bg-white rounded-full' href="https://github.com/haroldCoder/" variants={iconVariants}>
+      <motion.a className='bg-white rounded-full' href="https://website-harold-koderx.netlify.app/" variants={iconVariants}>
         <LanguageIcon className="icon-social" style={{ fontSize: 60 }} />
       </motion.a>
     </motion.div>
