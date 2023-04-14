@@ -8,7 +8,9 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search'; //utilizamos los icones de material UI
-import { Link } from "react-router-dom"; // utilizamos Link de react-router-dom para navegar entre las diferentes paginas
+import { Link, Navigate } from "react-router-dom"; // utilizamos Link de react-router-dom para navegar entre las diferentes paginas
+import Mode from './Mode';
+import { Button } from '@mui/material';
 
 
 export default function Navbar(props) {
@@ -60,7 +62,7 @@ export default function Navbar(props) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar className='nav' position="static">
+      <AppBar className='nav' style={{background: `${props.mode ? '#000' : '#1774ff'}`}} position="static">
         <Toolbar>
           <IconButton
             size="large"
@@ -75,8 +77,8 @@ export default function Navbar(props) {
           <div className={`flex justify-between w-[100%] ${open ? 'pr-16 w-[40%]' : null}`} style={{transition: "0.6s ease"}}> {/* si la prop de app.js, open es igual a true el padding izquierdo sera de 16.em y el width sera el 40% del tamaño total */}
             {open == false ? props.nav : text.map(e=>(
               e != "Redes Sociales" ?
-                <Link onClick={()=>{setOpen(false)}} to={`${e == "Inicio" ? "/" : "/"+e}`}>{e}</Link> 
-                : <button onClick={()=>{props.social(true)}}>{e}</button>
+                <Link onClick={()=>{setOpen(false), props.setSocial(false)}} to={`${e == "Inicio" ? "/" : "/"+e}`}>{e}</Link> 
+                : <Link to='/'><button onClick={()=>{props.setSocial(true)}}>{e}</button></Link>
             ))} { /* si open es igual a false se tomara el prop-nav el cual es un estado que se modificara en cada vista, de lo contrario se va a mostrar todas las rutas de navegacion */ }
             {/* si e no es igual a Redes sociales entonces solo se pondra un link, en donde si e == inicio entonces solo se va a poner la navegacion para la principal, en caso contrario se dejara normal */ }
           </div>
@@ -88,7 +90,12 @@ export default function Navbar(props) {
               placeholder="Buscar…"
               inputProps={{ 'aria-label': 'search' }}
             />
+            
+            
           </Search>
+          <Button onClick={()=>{props.setMode(!props.mode)}}>
+              <Mode mode={props.mode} />
+            </Button>
         </Toolbar>
       </AppBar>
     </Box>

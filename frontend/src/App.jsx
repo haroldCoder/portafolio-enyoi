@@ -16,17 +16,23 @@ function App() {
   const [nav, setNav] = useState(''); //manejador para controlar las distintas vistas en el menu de navegacion
   const [social, setSocial] = useState(false); //manejador para saber si se añade el componente de redes sociales
   const [isLoggedIn, setIsloggedIn] = useState(false); //manejador de el logueo en la app, para que cuando sea true la ruta protegida pueda ser accedida
+  const [mode, setMode] = useState(true); //manejador para el modo de la interfaz, ya se oscuro o claro
 
-  if (nav !== 'Contactame' && nav !== 'Requests') { // si el controlador nav no es igual a la sesion de contactar ni a la de solicitudes el body tendra un fondo blanco
-    document.querySelector('body').style.background = '#FFF';
-  }
+  useMemo(()=>{
+    if (nav !== 'Contactame' && nav !== 'Requests') { // si el controlador nav no es igual a la sesion de contactar ni a la de solicitudes el body tendra un fondo blanco
+      document.querySelector('body').style.background = '#FFF';
+    }
+    if(mode){
+      document.querySelector('body').style.background = '#000';
+    }
+  })
 
   return ( //usamos el Browser route para enrutar las distintas vistas de la aplicacion
     <BrowserRouter>
       <div className="App">
-        <Navbar nav={nav} social={setSocial} />
+        <Navbar nav={nav} mode={mode} setMode={setMode} setSocial={setSocial} />
         <Routes>
-          <Route path='/' element={<Home nav={setNav} social={social}  />} /> 
+          <Route path='/' element={<Home nav={setNav} setSocial={setSocial}  />} /> 
           <Route path='/Proyectos' element={<Projects nav={setNav} />} />
           <Route path='/Tecnologias' element={<Skills nav={setNav} />} />
           <Route path='/Contactame' element={<Contact nav={setNav} />} />
@@ -35,6 +41,13 @@ function App() {
         </Routes>
         <ToastContainer/>
       </div>
+        {
+          social && nav == "Inicio" ? 
+          <div className='w-[28%] absolute top-[18%] left-[70%]'> 
+              <Social/> {/* si el prop que me trae desde app.jsx es igual a true, se pintara lo que esta el el componente Social */}
+          </div>
+          : null
+        }
     </BrowserRouter>
   );
 }

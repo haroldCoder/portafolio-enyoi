@@ -38,7 +38,7 @@ export default function Home(props) {
                     <div className='w-[40%]'>
                         <h2 className='text-3xl text-white font-medium mb-4'>Harold Castaño</h2>      
                         <div className='text mt-8 flex'>
-                            <h2 className='text-xl text-center mr-2'>Soy</h2>
+                            <h2 className='text-xl text-gray-400 text-center mr-2'>Soy</h2>
                             <h2 className='text-xl text-blue-500'>{currentText}.</h2> {/* se pone el curretText para que se ponga lo que es igual a lo que se almacena, en aquel estado */}
                         </div>
                     </div>
@@ -47,13 +47,6 @@ export default function Home(props) {
                     <h2 className='text-[#747474] text-md'>Soy Harold Castaño Alvarez, apasionado por la programación y las nuevas tecnologías. Me dedico al desarrollo e innovación de aplicaciones que satisfagan las necesidades de los clientes.</h2>
                 </div>
             </div>
-            {
-                props.social == true ? 
-                <div className='w-[28%]'> 
-                    <Social/> {/* si el prop que me trae desde app.jsx es igual a true, se pintara lo que esta el el componente Social */}
-                </div>
-                : null
-            }
         </div>
         <div className='target mb-8 flex flex-col items-center p-6 rounded-lg float-right mt-16 border-[1px] border-gray-400 shadow-lg shadow-slate-600 to-transparentbg-repeat-round w-[50%]' style={{backdropFilter: "blur(6px)"}}>
             <h2 className='text-[#747474] text-lg'>Como desarrollador Full Stack Web, cuento con habilidades y experiencia en diversas tecnologías, entre ellas Node.js y React.js, dos herramientas esenciales para la creación de aplicaciones web modernas y escalables. Además, poseo experiencia en el desarrollo de microservicios con .NET, lo que me permite crear soluciones robustas y seguras para mis clientes. A lo largo de mi carrera, he trabajado en diferentes proyectos que me han permitido ampliar mis habilidades técnicas y mi capacidad para resolver problemas de manera efectiva. Soy un apasionado por la programación y me encanta estar al día con las últimas tendencias y tecnologías. Si buscas un desarrollador comprometido y capaz de llevar tu proyecto al siguiente nivel, no dudes en contactarme.</h2>
