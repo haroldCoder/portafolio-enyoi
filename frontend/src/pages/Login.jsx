@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import {USER} from '../../credential';
-import {PASSWORD} from '../../credential'
+import {USER} from '../../credent';
+import {PASSWORD} from '../../credent'
 
 export default function LoginPage(props) {
 
