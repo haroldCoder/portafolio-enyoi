@@ -8,7 +8,7 @@ export default function Projects(props) {
     props.nav("Proyectos")
   return (
     <div className='w-100 p-8 grid grid-cols-1 gap-6'>
-        <section className='hover:bg-gray-900 p-4 rounded-md'>
+        <section className={`${props.mode ? 'hover:bg-gray-900' : 'hover:bg-gray-400'} p-4 rounded-md`}>
             <h2 className='bg-gradient-to-t bg-clip-text text-transparent to-blue-800 from-blue-400 text-3xl' style={{fontWeight: 700}}>Delivery App</h2>
             <div className='flex px-4 mt-6'>
                 <div className='flex flex-col w-[40%]'>
@@ -33,7 +33,7 @@ export default function Projects(props) {
             </div>
             
         </section>
-        <section className='hover:bg-gray-900 p-4 rounded-md'>
+        <section className={`${props.mode ? 'hover:bg-gray-900' : 'hover:bg-gray-400'} p-4 rounded-md`}>
             <h2 className='bg-gradient-to-t bg-clip-text text-transparent to-blue-800 from-blue-400 text-3xl' style={{fontWeight: 700}}>Sales koderx</h2>
             <div className='flex px-4 mt-6'>
                 <div className='flex flex-col w-[40%]'>
@@ -52,7 +52,7 @@ export default function Projects(props) {
                 <img className='w-[45%] h-[50%] ml-24 mt-24' src={sales} />
             </div>
         </section>
-        <section className='hover:bg-gray-900 p-4 rounded-md'>
+        <section className={`${props.mode ? 'hover:bg-gray-900' : 'hover:bg-gray-400'} p-4 rounded-md`}>
             <h2 className='bg-gradient-to-t bg-clip-text text-transparent to-blue-800 from-blue-400 text-3xl' style={{fontWeight: 700}}>Climax</h2>
             <div className='flex px-4 mt-6'>
                 <div className='flex flex-col w-[40%]'>

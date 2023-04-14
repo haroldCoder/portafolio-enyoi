@@ -33,10 +33,10 @@ function App() {
         <Navbar nav={nav} mode={mode} setMode={setMode} setSocial={setSocial} />
         <Routes>
           <Route path='/' element={<Home nav={setNav} setSocial={setSocial}  />} /> 
-          <Route path='/Proyectos' element={<Projects nav={setNav} />} />
+          <Route path='/Proyectos' element={<Projects mode={mode} nav={setNav} />} />
           <Route path='/Tecnologias' element={<Skills nav={setNav} />} />
           <Route path='/Contactame' element={<Contact nav={setNav} />} />
-          <Route exact path="/Login" element={<LoginPage nav={setNav} isLoggedIn={isLoggedIn} setIsloggedIn={setIsloggedIn}/>} />
+          <Route exact path="/Login" element={<LoginPage nav={setNav} mode={mode} isLoggedIn={isLoggedIn} setIsloggedIn={setIsloggedIn}/>} />
           <Route path='/solicitudes' element={isLoggedIn ? <Request nav={setNav} /> : null} />
         </Routes>
         <ToastContainer/>
@@ -44,7 +44,7 @@ function App() {
         {
           social && nav == "Inicio" ? 
           <div className='w-[28%] absolute top-[18%] left-[70%]'> 
-              <Social/> {/* si el prop que me trae desde app.jsx es igual a true, se pintara lo que esta el el componente Social */}
+              <Social mode={mode} /> {/* si el prop que me trae desde app.jsx es igual a true, se pintara lo que esta el el componente Social */}
           </div>
           : null
         }

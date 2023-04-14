@@ -5,7 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LanguageIcon from '@mui/icons-material/Language';
 import {motion} from 'framer-motion'
 
-export default function Social() {
+export default function Social(props) {
   const socialVariants = {
     initial: {
       opacity: 0,
@@ -31,7 +31,7 @@ export default function Social() {
   };
   return (
     <motion.div
-      className="flex justify-between social"
+      className={`flex justify-between social ${props.mode ? 'bg-gray-800' : ' bg-[#c2c2c2]'}`}
       variants={socialVariants}
       initial="initial"
       animate="animate"
