@@ -60,7 +60,7 @@ export const skillsSoftware = [
     {
         "name": "C++",
         "cover": cpp,
-        "type": "programmin",
+        "type": "programming",
         "progress": 60
     },
     {

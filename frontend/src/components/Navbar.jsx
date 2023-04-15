@@ -11,12 +11,15 @@ import SearchIcon from '@mui/icons-material/Search'; //utilizamos los icones de 
 import { Link, Navigate } from "react-router-dom"; // utilizamos Link de react-router-dom para navegar entre las diferentes paginas
 import Mode from './Mode';
 import { Button } from '@mui/material';
+import SearchSystem from './SearchSystem';
 
 
 export default function Navbar(props) {
 
     const [text, setText] = React.useState(['Inicio', 'Proyectos', 'Tecnologias', 'Redes Sociales', 'Contactame', "Login"]); // creamos un estado para controlar las diferentes paginas por las que el usuario puede navegar
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
+    const [search, setSearch] = React.useState(false);
+    const searchRef = React.useRef(null);
 
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
@@ -42,7 +45,18 @@ export default function Navbar(props) {
         alignItems: 'center',
         justifyContent: 'center',
     }));
+    React.useMemo((e)=>{
+      document.addEventListener('click', (ev)=>{
+        if(!document.querySelector(".search").contains(document.getElementById(ev.target.id))){
+          setSearch(false)
+        }
+      });
+      return () => {
+        document.removeEventListener('click', handleClickOutside);
+      };
 
+
+    }, [searchRef])
     const StyledInputBase = styled(InputBase)(({ theme }) => ({
         color: 'inherit',
         '& .MuiInputBase-input': {
@@ -77,25 +91,30 @@ export default function Navbar(props) {
           <div className={`flex justify-between w-[100%] ${open ? 'pr-16 w-[40%]' : null}`} style={{transition: "0.6s ease"}}> {/* si la prop de app.js, open es igual a true el padding izquierdo sera de 16.em y el width sera el 40% del tamaño total */}
             {open == false ? props.nav : text.map(e=>(
               e != "Redes Sociales" ?
-                <Link onClick={()=>{setOpen(false), props.setSocial(false)}} to={`${e == "Inicio" ? "/" : "/"+e}`}>{e}</Link> 
-                : <Link to='/'><button onClick={()=>{props.setSocial(true)}}>{e}</button></Link>
+                <Link onClick={()=>{setOpen(false), props.setSocial(false)}} className={`${props.mode ? 'hover:text-gray-500' : 'hover:text-slate-800'}`} to={`${e == "Inicio" ? "/" : "/"+e}`}>{e}</Link> 
+                : <Link to='/'><button className={`rounded-md px-2 ${props.mode ? 'hover:bg-blue-600 ' : 'hover:bg-slate-800'}`} onClick={()=>{props.setSocial(true)}}>{e}</button></Link>
             ))} { /* si open es igual a false se tomara el prop-nav el cual es un estado que se modificara en cada vista, de lo contrario se va a mostrar todas las rutas de navegacion */ }
             {/* si e no es igual a Redes sociales entonces solo se pondra un link, en donde si e == inicio entonces solo se va a poner la navegacion para la principal, en caso contrario se dejara normal */ }
           </div>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Buscar…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
+          <div>
+            <Search ref={searchRef} className='search' onClick={()=>{setSearch(true)}}>
+                <SearchIconWrapper id='icon'>
+                  <SearchIcon  />
+                </SearchIconWrapper>
+                <StyledInputBase 
+                id='input'
+                  placeholder="Buscar…"
+                  inputProps={{ 'aria-label': 'search' }}
+                />
+            </Search>
+            {
+              search ? <SearchSystem/> : null
+            }
             
-            
-          </Search>
+          </div>
           <Button onClick={()=>{props.setMode(!props.mode)}}>
               <Mode mode={props.mode} />
-            </Button>
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>

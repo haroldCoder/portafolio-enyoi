@@ -20,7 +20,7 @@ function Skills(props){
     return(
         <div className="p-6 skills">
             <div className="title px-10 flex flex-1 justify-between w-full p-4 border-b-2 border-gray-700">
-                <h2 className="text-3xl text-blue-100 font-semibold">{type == "fullstack" ? "Full Stack" : type == "programming" ? "Programming lenguages" : null}</h2>
+                <h2 className="text-3xl text-blue-100 font-semibold">{type == "fullstack" ? "Full Stack" : type == "programming" ? "Otros" : null}</h2>
                 <div className="flex flex-col relative z-[100]"> 
                 <Button
                     id="basic-button"
@@ -33,7 +33,7 @@ function Skills(props){
                     variant="contained"
                     size="medium"
                 >
-                    Select <AiOutlineDown className="w-[15px]"/>
+                    Seleccionar <AiOutlineDown className="w-[15px]"/>
                 </Button>
                 <Menu
                     id="basic-menu"
@@ -44,8 +44,8 @@ function Skills(props){
                     'aria-labelledby': 'basic-button',
                     }}
                 >
-                    <MenuItem onClick={()=>{setType("programming"), handleClose()}}>programming languages</MenuItem>
-                    <MenuItem onClick={()=>{setType("fullstack"), handleClose()}}>Full Stack Developer</MenuItem>
+                    <MenuItem onClick={()=>{setType("programming"), handleClose()}}>Otros</MenuItem>
+                    <MenuItem onClick={()=>{setType("fullstack"), handleClose()}}>Desarrollador Full Stack</MenuItem>
                 </Menu>
                 </div>
             </div>
