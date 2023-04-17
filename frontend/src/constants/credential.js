@@ -66,8 +66,8 @@ export const skillsSoftware = [
     {
         "name": "C#",
         "cover": csharp,
-        "type": "programming",
-        "progress": 40
+        "type": "fullstack",
+        "progress": 60
     },
     {
         "name": "JAVA",
@@ -84,8 +84,8 @@ export const skillsSoftware = [
     {
         "name": "PYTHON3",
         "cover": python,
-        "type": "fullstack",
-        "progress": 80
+        "type": "programming",
+        "progress": 70
     },
     {
         "name": "SQL",
