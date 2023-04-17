@@ -8,7 +8,13 @@ const {
     DATABASE_URL
   } = require('../config.js')
 
-const db = mysql.createConnection(DATABASE_URL);
+const db = mysql.createConnection({
+  "host": DB_HOST,
+  "database": DB_NAME,
+  "password": DB_PASSWORD,
+  "user": DB_USER,
+  "port": DB_PORT
+});
 
 db.connect((err) => {
     if(err) throw err;
