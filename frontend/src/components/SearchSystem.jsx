@@ -28,7 +28,7 @@ export default function SearchSystem() {
   }
 ]
   return (
-    <div className='gap col-span-1 gap-8 p-2 absolute w-[18%] right-[2%]' style={{background: "#00000093", backdropFilter: "blur(6px)"}}>
+    <div className='gap col-span-1 gap-8 p-2 absolute w-[18%] right-0 z-0' style={{background: "#00000093", backdropFilter: "blur(6px)"}}>
       {
         terms.map(e=>(
           <Link to={`/${e.title == "Inicio" ? '' : e.title}`}>
