@@ -3,6 +3,7 @@ import delivery from '../assets/delivery.png';
 import sales from '../assets/sales.png';
 import climax from '../assets/climax.png'
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import airbnb_clone from '../assets/airbnb_clone.png'
 
 export default function Projects(props) {
     props.nav("Proyectos")
@@ -75,6 +76,24 @@ export default function Projects(props) {
                     </div>
                 </div>
                 <img className='w-[45%] h-[50%] ml-24 mt-24' src={climax} />
+            </div>
+        </section>
+        <section className={`${props.mode ? 'hover:bg-gray-900' : 'hover:bg-gray-400'} p-4 rounded-md`}>
+            <h2 className='bg-gradient-to-t bg-clip-text text-transparent to-blue-800 from-blue-400 text-3xl' style={{fontWeight: 700}}>Airbnb-clone</h2>
+            <div className='flex px-4 mt-6'>
+                <div className='flex flex-col w-[40%]'>
+                    <p className='text-gray-500 w-[100%]'>
+                        Airbnb-clone es una aplicación de entrenamiento que se enfoca en replicar el diseño y la interfaz de la plataforma original sin intentar competir con ella.
+                        Su objetivo es proporcionar a los usuarios un ambiente de práctica donde puedan explorar la funcionalidad de la página web real de Airbnb.
+                        A través de la aplicación de entrenamiento, los usuarios pueden aprender a navegar por la interfaz y descubrir las características clave que hacen que Airbnb sea una plataforma tan popular. Desde buscar alojamientos hasta reservar habitaciones, la aplicación de entrenamiento de Airbnb es una herramienta útil para aquellos que desean familiarizarse con la plataforma antes de utilizarla en la vida real.
+                    <a className='ml-2 text-blue-600' target='_blank' href="https://github.com/haroldCoder/ClimaxApp">github code.</a>
+                    </p>
+                    <div className='flex mt-16 relative left-[50%]'>
+                        <RemoveRedEyeIcon color='primary'/>
+                        <a href="https://airbnb-clone-koderx.netlify.app/"><i className='text-blue-600 ml-2'>Visitar</i></a>
+                    </div>
+                </div>
+                <img className='w-[45%] h-[50%] ml-24 mt-24' src={airbnb_clone} />
             </div>
         </section>
     </div>

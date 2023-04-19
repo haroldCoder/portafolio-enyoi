@@ -48,9 +48,30 @@ export default function Home(props) {
                 </div>
             </div>
         </div>
-        <div className='target mb-8 flex flex-col items-center p-6 rounded-lg float-right mt-16 border-[1px] border-gray-400 shadow-lg shadow-slate-600 to-transparentbg-repeat-round w-[50%]' style={{backdropFilter: "blur(6px)"}}>
-            <h2 className='text-[#747474] text-lg'>Como desarrollador Full Stack Web, cuento con habilidades y experiencia en diversas tecnologías, entre ellas Node.js y React.js, dos herramientas esenciales para la creación de aplicaciones web modernas y escalables. Además, poseo experiencia en el desarrollo de microservicios con .NET, lo que me permite crear soluciones robustas y seguras para mis clientes. A lo largo de mi carrera, he trabajado en diferentes proyectos que me han permitido ampliar mis habilidades técnicas y mi capacidad para resolver problemas de manera efectiva. Soy un apasionado por la programación y me encanta estar al día con las últimas tendencias y tecnologías. Si buscas un desarrollador comprometido y capaz de llevar tu proyecto al siguiente nivel, no dudes en contactarme.</h2>
-            <img src={software} className="w-[30%]" alt="" />
+        <div className='flex justify-end'>
+            <div className='target mb-8 flex flex-col items-center p-6 rounded-lg mt-16 border-[1px] border-gray-400 shadow-lg shadow-slate-600 to-transparentbg-repeat-round w-[50%]' style={{backdropFilter: "blur(6px)"}}>
+                <h2 className='text-[#747474] text-lg'>Como desarrollador Full Stack Web, cuento con habilidades y experiencia en diversas tecnologías, entre ellas Node.js y React.js, dos herramientas esenciales para la creación de aplicaciones web modernas y escalables. Además, poseo experiencia en el desarrollo de microservicios con .NET, lo que me permite crear soluciones robustas y seguras para mis clientes. A lo largo de mi carrera, he trabajado en diferentes proyectos que me han permitido ampliar mis habilidades técnicas y mi capacidad para resolver problemas de manera efectiva. Soy un apasionado por la programación y me encanta estar al día con las últimas tendencias y tecnologías. Si buscas un desarrollador comprometido y capaz de llevar tu proyecto al siguiente nivel, no dudes en contactarme.</h2>
+                <img src={software} className="w-[30%]" alt="" />
+            </div>
+        </div>
+        <div className='target mb-8 flex flex-col p-6 rounded-lg mt-16 border-[1px] bg-gradient-to-b from-slate-800 to-black border-gray-400 shadow-lg shadow-slate-600 to-transparentbg-repeat-round w-[50%]' style={{backdropFilter: "blur(6px)"}}>
+            <h2 className='text-[#FFF] text-xl text-center'>Encontraras esto en mi.</h2> 
+            <div className="my-6">
+                <h4 className='text-blue-500 text-lg'>Integro y honesto</h4>
+                <p className='text-[#747474] mt-3 ml-2'>Me enfoco en brindarle un producto de calidad, que satisfaga las necesidades del cliente.</p>
+            </div>
+            <div className="my-6">
+                <h4 className='text-blue-500 text-lg'>Colaboracion interdiciplinaria</h4>
+                <p className='text-[#747474] mt-3 ml-2'>En ocasiones oportunas, me gusta intercambiar roles de trabajo.</p>
+            </div>
+            <div className="my-6">
+                <h4 className='text-blue-500 text-lg'>Soluciones rapidas</h4>
+                <p className='text-[#747474] mt-3 ml-2'>Procuro que las soluciones a los diferentes problemas técnicos sean lo más óptimas y rápidas posibles.</p>
+            </div>
+            <div className="my-6">
+                <h4 className='text-blue-500 text-lg'>Autodidacta</h4>
+                <p className='text-[#747474] mt-3 ml-2'>Me fascina estar siempre en constante aprendizaje por cuenta propia.</p>
+            </div>
         </div>
     </div>
   )
