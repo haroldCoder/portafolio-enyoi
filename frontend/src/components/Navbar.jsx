@@ -77,26 +77,28 @@ export default function Navbar(props) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar className='sm:p-3' style={{background: `${props.mode ? '#000' : '#1774ff'}`}} position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-            onClick={(e)=>{setOpen(!open)}}
-          >
-            <MenuIcon />
-          </IconButton>
-          <div className={`flex nav justify-between w-[100%] ${open ? 'pr-16 w-[40%]' : null}`} style={{transition: "0.6s ease"}}> {/* si la prop de app.js, open es igual a true el padding izquierdo sera de 16.em y el width sera el 40% del tamaño total */}
-            {open == false ? props.nav : text.map(e=>(
-              e != "Redes Sociales" ?
-                <Link onClick={()=>{setOpen(false), props.setSocial(false)}} className={`${props.mode ? 'hover:text-gray-500' : 'hover:text-slate-800'}`} to={`${e == "Inicio" ? "/" : "/"+e}`}>{e}</Link> 
-                : <Link to='/'><button className={`rounded-md px-2 ${props.mode ? 'hover:bg-blue-600 ' : 'hover:bg-slate-800'}`} onClick={()=>{props.setSocial(true)}}>{e}</button></Link>
-            ))} { /* si open es igual a false se tomara el prop-nav el cual es un estado que se modificara en cada vista, de lo contrario se va a mostrar todas las rutas de navegacion */ }
-            {/* si e no es igual a Redes sociales entonces solo se pondra un link, en donde si e == inicio entonces solo se va a poner la navegacion para la principal, en caso contrario se dejara normal */ }
+        <Toolbar className='flex max-lg:justify-between'>
+        <div className={`${open ? 'flex-col items-start pr-16 xl:w-[40%]' : 'flex-row'} xl:flex-row flex md:w-[100%]`} style={{transition: "0.6s ease"}}>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}
+              onClick={(e)=>{setOpen(!open)}}
+            >
+              <MenuIcon />
+            </IconButton>
+            <div className={`flex nav justify-between w-[100%]`} > {/* si la prop de app.js, open es igual a true el padding izquierdo sera de 16.em y el width sera el 40% del tamaño total */}
+              {open == false ? props.nav : text.map(e=>(
+                e != "Redes Sociales" ?
+                  <Link onClick={()=>{setOpen(false), props.setSocial(false)}} className={`${props.mode ? 'hover:text-gray-500' : 'hover:text-slate-800'} max-md:mb-2 max-md:bg-[#3675ff] rounded-sm`} to={`${e == "Inicio" ? "/" : "/"+e}`}>{e}</Link> 
+                  : <Link to='/'><button className={`rounded-md px-2 ${props.mode ? 'hover:bg-blue-600' : 'hover:bg-slate-800'} max-md:bg-blue-700 mb-2`} onClick={()=>{props.setSocial(true)}}>{e}</button></Link>
+              ))} { /* si open es igual a false se tomara el prop-nav el cual es un estado que se modificara en cada vista, de lo contrario se va a mostrar todas las rutas de navegacion */ }
+              {/* si e no es igual a Redes sociales entonces solo se pondra un link, en donde si e == inicio entonces solo se va a poner la navegacion para la principal, en caso contrario se dejara normal */ }
+            </div>
           </div>
-          <div>
+          <div className='max-lg:hidden'>
             <Search ref={searchRef} className='search' onClick={()=>{setSearch(true)}}>
                 <SearchIconWrapper id='icon'>
                   <SearchIcon  />

@@ -43,7 +43,7 @@ function App() {
       </div>
         {
           social && nav == "Inicio" ? 
-          <div className='w-[28%] absolute top-[18%] left-[70%]'> 
+          <div className='max-md:w-[20vw] w-[28%] absolute top-[18%] max-lg:left-[55%] max-md:left-[2%] max-xl:left-[65%] left-[70%]'> 
               <Social mode={mode} /> {/* si el prop que me trae desde app.jsx es igual a true, se pintara lo que esta el el componente Social */}
           </div>
           : null

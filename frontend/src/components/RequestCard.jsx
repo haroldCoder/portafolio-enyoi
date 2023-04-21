@@ -13,7 +13,7 @@ export default function RequestCard(props ) { {/* el props contendra todo lo que
   }
 
   return (
-    <div className='p-4 w-[35%] mt-4'>
+    <div className='p-4 w-[35%] max-md:w-[100%] mt-4'>
         <div className='flex justify-between pt-2 pb-3 px-4 border-b-[1px] border-gray-800 rounded-md'>
             <h2 className='text-white text-md'>{props.nombre}</h2>
             <h2 className='text-blue-400 text-md'>{props.correo}</h2>

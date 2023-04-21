@@ -19,9 +19,9 @@ function Skills(props){
     props.nav("Tecnologias")
     return(
         <div className="p-6 skills">
-            <div className="title px-10 flex flex-1 justify-between w-full p-4 border-b-2 border-gray-700">
+            <div className="title px-10 flex flex-1 max-md:flex-col justify-between w-full p-4 border-b-2 border-gray-700">
                 <h2 className="text-3xl text-blue-100 font-semibold">{type == "fullstack" ? "Full Stack" : type == "programming" ? "Otros" : null}</h2>
-                <div className="flex flex-col relative z-[100]"> 
+                <div className="flex flex-col relative z-[100] max-md:mt-3"> 
                 <Button
                     id="basic-button"
                     aria-controls={open ? 'basic-menu' : undefined}
@@ -49,7 +49,7 @@ function Skills(props){
                 </Menu>
                 </div>
             </div>
-            <div className="pl-16 mt-8 d-grid col-span-3 flex flex-wrap w-[100%]">
+            <div className="pl-16 max-lg:p-8 mt-8 d-grid col-span-3 flex max-md:flex-col flex-wrap w-[100%]">
                 {
                     skillsSoftware.map(e=>(e.type == type ? <Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} /> : null))
                 }
