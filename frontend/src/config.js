@@ -1,1 +1,1 @@
-export const API = "https://portafolio-enyoi-production.up.railway.app/api/solicitudes";
+export const API = "http://localhost:4000/api/solicitudes/";

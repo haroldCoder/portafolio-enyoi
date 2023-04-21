@@ -27,7 +27,7 @@ request.deleteRequest = (req, res) =>{
     const {id} = req.params;
 
     db.query(`DELETE FROM request WHERE id = ${id}`, (err, re)=>{
-        if(err) throw err;
+        if(err) console.log(re);
         console.log("request delete");
         res.send("solicitud eliminada");
     })
@@ -37,7 +37,7 @@ request.putRequest = (req, res) =>{
     const {id} = req.params;
     const {solicitud, comentario} = req.body;
 
-    db.query(`UPDATE request SET solicitud = "${solicitud}", comentario = "${comentario}" WHERE id = ${id}`, (err, re)=>{
+    db.query(`UPDATE request SET solicitud = '${solicitud}', comentario = '${comentario}' WHERE id = ${id}`, (err, re)=>{
         if(err) throw err;
         console.log("request update");
         res.send("solicitud modificada");
