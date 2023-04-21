@@ -28,8 +28,8 @@ export default function Home(props) {
 
   return (
     <div className='main p-16 w-[100%]'>
-        <div className="flex justify-between pr-16">
-            <div className="target flex flex-col p-6 rounded-lg  bg-gradient-to-b border-[1px] shadow-lg shadow-slate-600 to-transparent from-gray-800 bg-repeat-round w-[50%]" style={{backdropFilter: "blur(6px)"}}>
+        <div className="flex justify-between pr-16 ">
+            <div className="target w-[80%] flex flex-col p-6 rounded-lg  bg-gradient-to-b border-[1px] shadow-lg shadow-slate-600 to-transparent from-gray-800 bg-repeat-round w-[50%]" style={{backdropFilter: "blur(6px)"}}>
                 <div className="flex justify-between w-[100%]">
                     <div className='image'>
                         <img src={harold} className="w-[290px] h-[300px] rounded-full" alt="harold" />
