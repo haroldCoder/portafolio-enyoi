@@ -76,7 +76,7 @@ export default function Navbar(props) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar className='nav' style={{background: `${props.mode ? '#000' : '#1774ff'}`}} position="static">
+      <AppBar className='sm:p-3' style={{background: `${props.mode ? '#000' : '#1774ff'}`}} position="static">
         <Toolbar>
           <IconButton
             size="large"
@@ -88,7 +88,7 @@ export default function Navbar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <div className={`flex justify-between w-[100%] ${open ? 'pr-16 w-[40%]' : null}`} style={{transition: "0.6s ease"}}> {/* si la prop de app.js, open es igual a true el padding izquierdo sera de 16.em y el width sera el 40% del tamaño total */}
+          <div className={`flex nav justify-between w-[100%] ${open ? 'pr-16 w-[40%]' : null}`} style={{transition: "0.6s ease"}}> {/* si la prop de app.js, open es igual a true el padding izquierdo sera de 16.em y el width sera el 40% del tamaño total */}
             {open == false ? props.nav : text.map(e=>(
               e != "Redes Sociales" ?
                 <Link onClick={()=>{setOpen(false), props.setSocial(false)}} className={`${props.mode ? 'hover:text-gray-500' : 'hover:text-slate-800'}`} to={`${e == "Inicio" ? "/" : "/"+e}`}>{e}</Link> 

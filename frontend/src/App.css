@@ -43,3 +43,11 @@ body {
 .blue-toast {
   background-color: blue;
 }
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+  }
+  .main{
+    padding: 60px 20px;
+  }
+}

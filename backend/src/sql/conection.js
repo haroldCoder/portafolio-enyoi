@@ -1,4 +1,5 @@
-const mysql = require('mysql2');
+// const mysql = require('mysql2');
+const { Pool } = require('pg');
 const {
     DB_HOST,
     DB_NAME,
@@ -8,7 +9,7 @@ const {
     DATABASE_URL
   } = require('../config.js')
 
-const db = mysql.createConnection({
+const db = new Pool({
   "host": DB_HOST,
   "database": DB_NAME,
   "password": DB_PASSWORD,
