@@ -6,7 +6,7 @@ request.getRequest = (req, res) =>{
     if (err) {
       throw err;
     }
-    res.json(result);
+    res.json(result.rows);
   });
 }
 
