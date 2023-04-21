@@ -12,7 +12,11 @@ request.getRequest = (req, res) =>{
 
 request.postRequest = (req, res) =>{
     const {nombre, correo, tel, solicitud, comentario} = req.body;
-    db.query(`INSERT INTO request(nombre, correo, tel, solicitud, comentario) VALUES ("${nombre}", "${correo}", "${tel}", "${solicitud}", "${comentario}")`, (result, err)=>{
+    const query = {
+      text: 'INSERT INTO request(nombre, correo, tel, solicitud, comentario) VALUES($1, $2, $3, $4, $5)',
+      values: [nombre, correo, tel, solicitud, comentario],
+    };
+    db.query(query, (result, err)=>{
       if(err) console.log(err);;
       console.log("request add", result);
       res.send("request with 200");
