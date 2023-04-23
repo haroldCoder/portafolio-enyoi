@@ -30,13 +30,13 @@ export default function Home(props) {
     <div className='main p-16 w-[100%]'>
         <div className="flex justify-between xl:pr-16 ">
             <div className="target xl:w-[60%] flex flex-col p-6 rounded-lg  bg-gradient-to-b border-[1px] shadow-lg shadow-slate-600 to-transparent from-gray-800 bg-repeat-round lg:w-[70%]" style={{backdropFilter: "blur(6px)"}}>
-                <div className="flex justify-between max-sm:flex-col w-[100%]">
-                    <div className='image max-md:flex max-md:justify-center'>
-                        <img src={harold} className="max-md:w-[50vw] md:w-[20rem] md:h-[32vw] max-md:h-[50vw] lg:rounded-full xl:w-[20vw] xl:h-[20vw]" alt="harold" />
-                        <img src={coder} className="md:w-[12vw] md:h-[12vw] rounded-full absolute max-md:hidden xl:left-[28%] md:left-[28vh] md:top-[20vh] lg:top-[50%] xl:w-[8vw] xl:h-[8vw] lg:left-[40%]" alt="coder" />
+                <div className="flex justify-between max-md:flex-col w-[100%]">
+                    <div className='image max-md:flex md:w-[40%]  max-md:justify-center'>
+                        <img src={harold} className="max-md:w-[30%] lg:w-[18em] lg:h-[18em] lg:rounded-full" alt="harold" />
+                        <img src={coder} className="md:w-[82px] md:h-[82px] rounded-full absolute max-lg:hidden xl:w-[8vw] xl:h-[8vw] lg:left-[26%] lg:top-[47%]" alt="coder" />
                     </div>
-                    <div className='w-[40%] max-sm:w-[100%] max-sm:mt-8'>
-                        <h2 className='text-3xl text-white font-medium mb-4'>Harold Castaño</h2>      
+                    <div className='w-[40%] max-md:w-[100%] max-md:mt-8'>
+                        <h2 className='text-3xl text-white max-md:text-center font-medium mb-4'>Harold Castaño</h2>      
                         <div className='text mt-8 flex'>
                             <h2 className='text-xl text-gray-400 text-center mr-2'>Soy</h2>
                             <h2 className='text-xl text-blue-500 max-sm:w-[100%]'>{currentText}.</h2> {/* se pone el curretText para que se ponga lo que es igual a lo que se almacena, en aquel estado */}

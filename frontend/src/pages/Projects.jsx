@@ -72,12 +72,12 @@ export default function Projects(props) {
                             {e.descript}
                             <a className='ml-2 text-blue-600' target='_blank' href={e.github}>github code.</a>
                         </p>
-                        <div className='flex lg:mt-16 max-xl:my-10 relative left-[50%] max-xl:left-[35%]'>
+                        <div className='flex lg:mt-16 max-xl:my-10 relative left-[50%] max-xl:left-[35%] '>
                             <RemoveRedEyeIcon color='primary'/>
                             <a href={e.link}><i className='text-blue-600 ml-2'>Visitar</i></a>
                         </div>
                     </div>
-                    <img className='w-[100%] h-[40vw] max-xl:m-0 ml-24 mt-24' src={e.image} />
+                    <img className='max-xl:w-[100%] w-[45%] max-xl:h-[40vw] h-[50%] max-xl:m-0 ml-24 mt-24' src={e.image} />
                 </div> 
             </section>
             ))  

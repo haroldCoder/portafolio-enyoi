@@ -4,12 +4,11 @@ import js from '../assets/img/js.png'
 import jquery from '../assets/img/jquery.png';
 import php from '../assets/img/php.png'
 import react from '../assets/img/reactjs.png'
-import angular from '../assets/img/angular.png'
+import next from '../assets/img/nextjs.png'
 import cpp from '../assets/img/cpp.png'
 import csharp from '../assets/img/csharp.png'
 import java from '../assets/img/java.png'
 import python from '../assets/img/python.png'
-import machine from '../assets/img/machine.png'
 import sql from '../assets/img/sql.png'
 import c from '../assets/img/c.png'; {/* se importaran todas las imagenes, para que puedan ser utilizadas en los arreglos de objetos */ }
 
@@ -52,8 +51,8 @@ export const skillsSoftware = [
         "progress": 80
     },
     {
-        "name": "ANGULARJS",
-        "cover": angular,
+        "name": "NEXTJS",
+        "cover": next,
         "type": "fullstack",
         "progress": 60
     },
