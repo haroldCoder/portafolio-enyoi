@@ -4,6 +4,7 @@ import sales from '../assets/sales.png';
 import climax from '../assets/climax.png'
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import airbnb_clone from '../assets/airbnb_clone.png'
+import tweet from '../assets/tweet.png'
 
 export default function Projects(props) {
     props.nav("Proyectos")
@@ -58,6 +59,17 @@ export default function Projects(props) {
             "link": "https://airbnb-clone-koderx.netlify.app/",
             "github": "https://github.com/haroldCoder/Airbnb-Clone",
             "image": airbnb_clone
+        },
+        {
+            "name": "Twitter-koderx-clone",
+            "descript": `Esta aplicación tiene el mismo objetivo que Airbnb-clone.
+             Se trata de una clonación de la aplicación original de Twitter,
+             pero con una diferencia clave: los colores de azul han sido reemplazados por verde. Además del cambio de colores,
+             esta aplicación presenta una interfaz de usuario muy similar a la de Twitter,
+             lo que la hace intuitiva y fácil de usar para aquellos que ya están familiarizados con la red social.`,
+            "link": "https://twitter-koderx-clone.netlify.app/",
+            "github": "https://github.com/haroldCoder/Twitter-koderx",
+            "image": tweet
         }
     ]
   return (
