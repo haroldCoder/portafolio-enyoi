@@ -5,6 +5,7 @@ import climax from '../assets/climax.png'
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import airbnb_clone from '../assets/airbnb_clone.png'
 import tweet from '../assets/tweet.png'
+import dashboard from '../assets/dashboard.png'
 
 export default function Projects(props) {
     props.nav("Proyectos")
@@ -70,6 +71,13 @@ export default function Projects(props) {
             "link": "https://twitter-koderx-clone.netlify.app/",
             "github": "https://github.com/haroldCoder/Twitter-koderx",
             "image": tweet
+        },
+        {
+            "name": "Dashboard-koderx",
+            "descript": `Es una pagina web, la cual fue parte de una prueba tecnica, el proyecto se trata de gestion de usuarios con Reactjs y ustilizando el localStorage`,
+            "link": "https://dashboard-koderx.netlify.app/",
+            "github": "https://github.com/haroldCoder/dashboard",
+            "image": dashboard
         }
     ]
   return (
