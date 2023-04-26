@@ -1,3 +1,4 @@
+//crear credenciales para la db y prod
 const DB_HOST = process.env.DB_HOST || 'localhost'
 const DB_USER = process.env.DB_USER || 'postgres'
 const DB_PASSWORD = process.env.DB_PASSWORD || '2364144'

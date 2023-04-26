@@ -9,6 +9,7 @@ const {
     DATABASE_URL
   } = require('../config.js')
 
+  //crear conexion con la db
 const db = new Pool({
   "host": DB_HOST,
   "database": DB_NAME,
@@ -17,6 +18,7 @@ const db = new Pool({
   "port": DB_PORT,
 });
 
+//testear la conexion
 db.connect((err) => {
     if(err) throw err;
     console.log('Conexión exitosa a la base de datos');

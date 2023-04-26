@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-
+//usar el componente para administrar rutas
 app.use('/api/solicitudes', require("./routes/request-routes"));
 
 
