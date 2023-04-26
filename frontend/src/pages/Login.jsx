@@ -2,11 +2,14 @@ import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import {USER} from '../../credent';
 import {PASSWORD} from '../../credent'
+import Alert from '@mui/material/Alert';
+
 
 export default function LoginPage(props) {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [open, setOpen] = useState(false);
 
   const navigate = useNavigate();
 
@@ -20,6 +23,7 @@ export default function LoginPage(props) {
 
   const Submit = (e) =>{
     e.preventDefault();
+    setOpen(true);
     if(username == USER && password == PASSWORD){
       props.setIsloggedIn(true) /* cuando se inicie sesion el prop de app.jsx isLoggedIn sera igual a true, para que la ruta privada sea accedida */
     }
@@ -27,7 +31,10 @@ export default function LoginPage(props) {
 
   useEffect(()=>{
     if(props.isLoggedIn){
-      navigate("/solicitudes") // cuando el prop isLoggedIn sea true, inmediatamente sera redirigido a la ruta privada, para ver las solicitudes
+      setTimeout(()=>{
+        navigate("/solicitudes") // cuando el prop isLoggedIn sea true, inmediatamente sera redirigido a la ruta privada, para ver las solicitudes
+      }, 2000)
+      
     }
   })
   props.nav("Login")
@@ -46,6 +53,11 @@ export default function LoginPage(props) {
           <input type="password" value={password} onChange={onChangePassword} className={`bg-transparent border-b-[1px] border-gray-500 ${!props.mode ? 'text-black' : 'text-gray-300'} p-2 w-[100%]`} />
         </div>
         <button className='bg-blue-500 rounded-md p-3 text-white'>Iniciar sesión</button>
+        {
+          open ?
+          <Alert onClose={()=>{}} severity={`${props.isLoggedIn ? 'success' : 'error'}`} style={{background: "#AAA", fontSize: "15px"}}>{`${props.isLoggedIn ? 'Bievenido' : 'credenciales incorrectas'}`}</Alert>
+          : null
+        }
       </form>
       
     </div>
