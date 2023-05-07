@@ -36,16 +36,16 @@ export default function Social(props) {
       initial="initial"
       animate="animate"
     >
-      <motion.a className='bg-white  rounded-full max-md:mb-4 md:mr-4' href="https://www.facebook.com/profile.php?id=100073088183904" variants={iconVariants}>
+      <motion.a target='_blank' className='bg-white  rounded-full max-md:mb-4 md:mr-4' href="https://www.facebook.com/profile.php?id=100073088183904" variants={iconVariants}>
         <FacebookIcon className="icon-social" style={{ fontSize: 60 }} />
       </motion.a>
-      <motion.a className='bg-white  rounded-full max-md:mb-4 md:mr-4' href="https://github.com/haroldCoder/" variants={iconVariants}>
+      <motion.a target='_blank' className='bg-white  rounded-full max-md:mb-4 md:mr-4' href="https://github.com/haroldCoder/" variants={iconVariants}>
         <GitHubIcon className="icon-social" style={{ fontSize: 60 }} />
       </motion.a>
-      <motion.a className='bg-white  rounded-full max-md:mb-4 md:mr-4' href="https://www.linkedin.com/in/harold-casta%C3%B1o-816180216/" variants={iconVariants}>
+      <motion.a target='_blank' className='bg-white  rounded-full max-md:mb-4 md:mr-4' href="https://www.linkedin.com/in/harold-casta%C3%B1o-816180216/" variants={iconVariants}>
         <LinkedInIcon className="icon-social" style={{ fontSize: 60 }} />
       </motion.a>
-      <motion.a className='bg-white  rounded-full max-md:mb-4 md:mr-4' href="https://website-harold-koderx.netlify.app/" variants={iconVariants}>
+      <motion.a target='_blank' className='bg-white  rounded-full max-md:mb-4 md:mr-4' href="https://website-harold-koderx.netlify.app/" variants={iconVariants}>
         <LanguageIcon className="icon-social" style={{ fontSize: 60 }} />
       </motion.a>
     </motion.div>

@@ -99,7 +99,7 @@ export default function Navbar(props) {
             </div>
           </div>
           <div className='max-lg:hidden'>
-            <Search ref={searchRef} className='search' onClick={()=>{setSearch(true)}}>
+            <Search ref={searchRef} className='search' onClick={()=>{setSearch(true); props.setSocial(false)}}>
                 <SearchIconWrapper id='icon'>
                   <SearchIcon  />
                 </SearchIconWrapper>
