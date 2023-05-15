@@ -31,9 +31,9 @@ export default function Home(props) {
         <div className="flex justify-between xl:pr-16 ">
             <div className="target xl:w-[60%] flex flex-col p-6 rounded-lg  bg-gradient-to-b border-[1px] shadow-lg shadow-slate-600 to-transparent from-gray-800 bg-repeat-round lg:w-[70%]" style={{backdropFilter: "blur(6px)"}}>
                 <div className="flex justify-between max-md:flex-col w-[100%]">
-                    <div className='image max-md:flex md:w-[40%]  max-md:justify-center'>
-                        <img src={harold} className="max-md:w-[30%] lg:w-[18em] lg:h-[18em] lg:rounded-full" alt="harold" />
-                        <img src={coder} className="md:w-[82px] md:h-[82px] rounded-full absolute max-lg:hidden xl:w-[8vw] xl:h-[8vw] lg:left-[26%] lg:top-[47%]" alt="coder" />
+                    <div className='image max-md:flex md:w-[40%] h-72 max-md:justify-center'>
+                        <img src={harold} className="max-md:w-64 md:h-[30vw] lg:w-72 lg:h-full lg:rounded-full object-cover" alt="harold" />
+                        <img src={coder} className="md:w-[82px] md:h-[82px] rounded-full absolute max-lg:hidden xl:w-[7vw] xl:h-[7vw] lg:left-[26%] lg:top-[47%]" alt="coder" />
                     </div>
                     <div className='w-[40%] max-md:w-[100%] max-md:mt-8'>
                         <h2 className='text-3xl text-white max-md:text-center font-medium mb-4'>Harold Castaño</h2>      
