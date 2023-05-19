@@ -68,7 +68,7 @@ export default function Projects(props) {
              pero con una diferencia clave: los colores de azul han sido reemplazados por verde. Además del cambio de colores,
              esta aplicación presenta una interfaz de usuario muy similar a la de Twitter,
              lo que la hace intuitiva y fácil de usar para aquellos que ya están familiarizados con la red social.`,
-            "link": "https://twitter-koderx-clone.netlify.app/",
+            "link": "https://twitter-koderx-clone.vercel.app/",
             "github": "https://github.com/haroldCoder/Twitter-koderx",
             "image": tweet
         },
