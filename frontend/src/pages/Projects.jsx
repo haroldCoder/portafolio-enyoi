@@ -6,6 +6,7 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import airbnb_clone from '../assets/airbnb_clone.png'
 import tweet from '../assets/tweet.png'
 import dashboard from '../assets/dashboard.png'
+import pqrs from '../assets/pqrs.png';
 
 export default function Projects(props) {
     props.nav("Proyectos")
@@ -78,6 +79,16 @@ export default function Projects(props) {
             "link": "https://dashboard-koderx.netlify.app/",
             "github": "https://github.com/haroldCoder/dashboard",
             "image": dashboard
+        },
+        {
+            "name": "Pqrs Enyoi",
+            "descript": `Es una aplicación web construida con Node.js, Express.js y Reactjs, la cual hace parte de una prueba para la compañia enyoi, 
+             que permite almacenar y gestionar peticiones,
+             quejas y reclamos (PQR) en una base de datos. Funciona como un CRUD, aunque no cuenta con la funcionalidad de actualización.
+             En la interfaz del cliente, los usuarios pueden visualizar todas las PQR existentes y tienen la capacidad de crear sus propias PQR.`,
+             "link": "https://pqrs-enyoi.netlify.app/",
+             "github": "https://github.com/haroldCoder/test-enyoi",
+             "image": pqrs
         }
     ]
   return (
