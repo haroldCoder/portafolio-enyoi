@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
@@ -11,6 +11,7 @@ import LoginPage from './pages/Login'
 import Request from './pages/Request'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify' //importamos todo lo necesario para que la aplicacion funcione, correctamente, como lo es componentes, react-router-dom para hacer las diferentes paginas y el Toast container, para usar el react-toastify
+
 
 function App() {
   const [nav, setNav] = useState(''); //manejador para controlar las distintas vistas en el menu de navegacion

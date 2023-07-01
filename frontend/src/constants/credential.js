@@ -45,7 +45,7 @@ export const skillsSoftware = [
         "progress": 80
     },
     {
-        "name": "REACTJS",
+        "name": "REACTJS & React Native",
         "cover": react,
         "type": "fullstack",
         "progress": 80
