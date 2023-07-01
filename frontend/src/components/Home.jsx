@@ -1,9 +1,7 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import harold from '../assets/harold-koderx.jpg';
 import coder from '../assets/koderblue.png'
-import enyoi from '../assets/enyoi.png'
 import software from '../assets/software-engineering.png'
-import Social from './Social';
 
 export default function Home(props) {
     const [currentText, setCurrentText] = useState(''); //creamos el manejador para el texto de la animacion
