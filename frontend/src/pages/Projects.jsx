@@ -7,6 +7,8 @@ import airbnb_clone from '../assets/airbnb_clone.png'
 import tweet from '../assets/tweet.png'
 import dashboard from '../assets/dashboard.png'
 import pqrs from '../assets/pqrs.png';
+import butacaventura from '../assets/butacaventura.jpg';
+import movil from '../assets/App-movil.mp4'
 
 export default function Projects(props) {
     props.nav("Proyectos")
@@ -89,6 +91,24 @@ export default function Projects(props) {
              "link": "https://pqrs-enyoi.netlify.app/",
              "github": "https://github.com/haroldCoder/test-enyoi",
              "image": pqrs
+        },
+        {
+            "name": "Butacaventura",
+            "descript": `Es una aplicación web creada con Node.js, Express.js y React.js utilizando TypeScript (NodeTs, ExpressTs y ReactTs), y utiliza una base de datos MySQL.
+             La aplicación sigue una arquitectura orientada a objetos, principalmente en el backend. El objetivo de la aplicación fue desarrollar un proyecto de freelance para un cliente
+            mexicano que buscaba una página de venta de boletos con un sistema único. Este sistema seleccionaba un número aleatorio de personas para ubicarlas en diferentes áreas del evento,
+            ya sea en secciones VIP u otros lugares.`,
+            "link": "https://butacaventura-haroldkoderx.netlify.app/",
+            "image": butacaventura
+        },
+        {
+            "name": "WhatsApp-koderx-clone",
+            "descript": `Es una aplicación móvil que utiliza React Native con TypeScript para crear las interfaces de usuario en la parte móvil y aprovecha sus componentes nativos. Para almacenar la información,
+             se ha desarrollado un servidor utilizando Node.js y Express.js con TypeScript. Como base de datos, se ha utilizado PostgreSQL para relacionar tanto a los usuarios como los mensajes entre ellos.
+            La aplicación se encuentra en fase beta y cuenta con soporte tanto en Android como iOS`,
+            "github": "https://github.com/haroldCoder/whatsapp-koderx",
+            "image": movil,
+            "type": "video"
         }
     ]
   return (
@@ -108,7 +128,15 @@ export default function Projects(props) {
                             <a target='_blank' href={e.link}><i className='text-blue-600 ml-2'>Visitar</i></a>
                         </div>
                     </div>
-                    <img className='max-xl:w-[100%] w-[45%] max-xl:h-[40vw] h-[50%] max-xl:m-0 ml-24 mt-24' src={e.image} />
+                    {
+                        e.type != "video" ?
+                        <img className='max-xl:w-[100%] w-[45%] max-xl:h-[40vw] h-[50%] max-xl:m-0 ml-24 mt-24' src={e.image} />
+                        : 
+                        <video width="640" className='max-xl:w-[100%] w-[25%] max-xl:h-[40vw] h-[20%] max-xl:m-0 ml-24 mt-24' controls>
+                            <source src={e.image} type="video/mp4" />
+                            Tu navegador no admite el elemento de video.
+                        </video>
+                    }
                 </div> 
             </section>
             ))  
