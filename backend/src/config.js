@@ -1,9 +1,9 @@
 //crear credenciales para la db y prod
-const DB_HOST = process.env.DB_HOST || 'localhost'
+const DB_HOST = process.env.DB_HOST || 'containers-us-west-110.railway.app'
 const DB_USER = process.env.DB_USER || 'postgres'
-const DB_PASSWORD = process.env.DB_PASSWORD || '2364144'
-const DB_NAME = process.env.DB_NAME || 'request'
-const DB_PORT = process.env.DB_PORT || 5432
+const DB_PASSWORD = process.env.DB_PASSWORD || 'SbII75hIuKi9DamsWhGk'
+const DB_NAME = process.env.DB_NAME || 'railway'
+const DB_PORT = process.env.DB_PORT || 6479
 const PORT = process.env.PORT || 4000
 const DATABASE_URL='mysql://vaqdpxcwkdtceow06gb0:pscale_pw_JFTNU5kVE5dzwKfQGjw3EgI9UG1Wj5bq1aLHzi1SgUn@aws.connect.psdb.cloud/portafolio-eny?ssl={"rejectUnauthorized":true}'
 
