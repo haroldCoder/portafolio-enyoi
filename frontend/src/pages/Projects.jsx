@@ -9,6 +9,7 @@ import dashboard from '../assets/dashboard.png'
 import pqrs from '../assets/pqrs.png';
 import butacaventura from '../assets/butacaventura.jpg';
 import movil from '../assets/App-movil.mp4'
+import xiaomi3d from '../assets/xiaomi-3d.png'
 
 export default function Projects(props) {
     props.nav("Proyectos")
@@ -109,6 +110,14 @@ export default function Projects(props) {
             "github": "https://github.com/haroldCoder/whatsapp-koderx",
             "image": movil,
             "type": "video"
+        },
+        {
+            "name": "Xiaomi-3d-koderx",
+            "descript": `Es una página web hecha con React.js, cuyo enfoque es clonar el estilo de la página de Apple, pero con productos de Xiaomi. Utiliza la biblioteca de Three.js para implementar animaciones
+             y mostrar los diferentes móviles de la compañía. La página se encuentra actualmente en fase beta, pero se planea agregar más productos de la marca en el futuro, permitiendo a los usuarios interactuar con ellos.`,
+            "github": "https://github.com/haroldCoder/xiaomi-3D",
+            "image": xiaomi3d,
+            "link": "https://xiaomi-3d-koderx.netlify.app/"
         }
     ]
   return (
