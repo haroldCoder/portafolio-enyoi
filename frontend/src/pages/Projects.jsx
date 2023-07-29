@@ -10,6 +10,7 @@ import pqrs from '../assets/pqrs.png';
 import butacaventura from '../assets/butacaventura.jpg';
 import movil from '../assets/App-movil.mp4'
 import xiaomi3d from '../assets/xiaomi-3d.png'
+import vipkoderx from '../assets/vipkoderx.png'
 
 export default function Projects(props) {
     props.nav("Proyectos")
@@ -118,6 +119,17 @@ export default function Projects(props) {
             "github": "https://github.com/haroldCoder/xiaomi-3D",
             "image": xiaomi3d,
             "link": "https://xiaomi-3d-koderx.netlify.app/"
+        },
+        {
+            "name": "Vip koderx",
+            "descript": `Este sitio web, es la implementacion de tecnologias como Three.js, para animaciones, Stripe, para la pasarela de pagos.
+            Simula un sitio en donde los usuarios pueden pagar diversos planes o adquirir una subscripcion para servicios especiales,
+            ademas de que cuenta con una biblioteca reciente para que el usuario se registre o ingrese llamada clerk. el sitio esta contrueido con netxjs
+            y Typescript, lo que nos permite tener el backend y frontend en el mismo proyecto, por lo que se implemento el servicio de la pasarela de stripe con
+            Docker.`,
+            "github": "https://github.com/haroldCoder/nextjs-stripe",
+            "image": vipkoderx,
+            "link": "https://nextjs-stripe-five.vercel.app/"
         }
     ]
   return (
