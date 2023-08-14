@@ -49,10 +49,55 @@ function Skills(props){
                 </Menu>
                 </div>
             </div>
-            <div className="pl-16 max-lg:p-8 mt-8 d-grid col-span-3 flex max-md:flex-col flex-wrap w-[100%]">
+            <div className="pl-16 max-lg:p-8 mt-8 col-span-3 flex flex-col flex-wrap w-[100%]">
                 {
-                    skillsSoftware.map(e=>(e.type == type ? <Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} /> : null))
+                    type == "fullstack" ?
+                    <>
+                        <h2 className="text-gray-400">Dev Frontend</h2>
+                        <section className="flex flex-row mt-7 items-center">
+                            {
+                                skillsSoftware.frontend.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
+                            }
+                        </section>
+                        <h2 className="text-gray-400">Dev Backend</h2>
+                        <section className="flex flex-row mt-7 items-center">
+                            {
+                                skillsSoftware.backend.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
+                            }
+                        </section>
+                        <h2 className="text-gray-400">Control de Versiones</h2>
+                        <section className="flex flex-row mt-7 items-center">
+                            {
+                                skillsSoftware.version.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
+                            }
+                        </section>
+                        <h2 className="text-gray-400">BD Relacionales</h2>
+                        <section className="flex flex-row mt-7 items-center">
+                            {
+                                skillsSoftware.dbrelacional.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
+                            }
+                        </section>
+                        <h2 className="text-gray-400">BD No Relacionales</h2>
+                        <section className="flex flex-row mt-7 items-center">
+                            {
+                                skillsSoftware.dbnorelacional.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
+                            }
+                        </section>
+                        <h2 className="text-gray-400">Cloud</h2>
+                        <section className="flex flex-row mt-7 items-center">
+                            {
+                                skillsSoftware.cloud.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
+                            }
+                        </section>
+                    </>
+                    : 
+                    <section className="flex flex-row mt-7 items-center">
+                        {
+                            skillsSoftware.others.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
+                        }
+                    </section>
                 }
+                
             </div>
         </div>
     )

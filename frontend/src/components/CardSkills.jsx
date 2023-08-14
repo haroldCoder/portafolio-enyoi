@@ -20,9 +20,9 @@ class Card extends Component{
     render(){
   
         return(
-            <div className="card rounded-xl w-[17%] max-md:w-[100%] max-lg:w-[45%] mx-3 mb-12 p-5 bg-slate-800" onMouseOut={()=>{this.setState({ismouse: false})}} onMouseOver={()=>{this.setState({ismouse: true})}}>
-                <div className="mb-5 p-2 flex justify-center" style={{borderBottom: "2px solid #444"}}>
-                    <img src={this.cover} alt="" className="rounded-full max-md:w-[40vw] max-md:h-[40vw]" />
+            <div className="card rounded-xl mx-3 mb-12 p-5 bg-transparent" onMouseOut={()=>{this.setState({ismouse: false})}} onMouseOver={()=>{this.setState({ismouse: true})}}>
+                <div className="mb-5 p-2 pb-5 flex justify-center" style={{borderBottom: "2px solid #444"}}>
+                    <img src={this.cover} alt="" className={`rounded-full xl:w-[5vw] xl:h-[10vh] max-md:w-[20vw] max-md:h-[15vw] ${this.name == 'SUPABASE' ? "bg-gray-700": null}`} />
                 </div>
                 <p className="text-2xl text-neutral-500 text-center">{this.name}</p>
                 <div className="mt-4 h-5" id={this.name}>
