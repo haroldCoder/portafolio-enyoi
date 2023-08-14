@@ -1,7 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import {USER} from '../../credent';
-import {PASSWORD} from '../../credent'
 import Alert from '@mui/material/Alert';
 
 
@@ -24,7 +22,8 @@ export default function LoginPage(props) {
   const Submit = (e) =>{
     e.preventDefault();
     setOpen(true);
-    if(username == USER && password == PASSWORD){
+
+    if(username == import.meta.env.VITE_USER && password == import.meta.env.VITE_PASSWORD){
       props.setIsloggedIn(true) /* cuando se inicie sesion el prop de app.jsx isLoggedIn sera igual a true, para que la ruta privada sea accedida */
     }
   }
