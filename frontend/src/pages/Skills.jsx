@@ -53,45 +53,45 @@ function Skills(props){
                 {
                     type == "fullstack" ?
                     <>
-                        <h2 className="text-gray-400">Dev Frontend</h2>
-                        <section className="flex flex-row mt-7 items-center">
+                        <h2 className="text-gray-500 text-lg">Dev Frontend</h2>
+                        <section className="flex flex-row mt-7 items-center max-md:flex-col">
                             {
                                 skillsSoftware.frontend.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
                             }
                         </section>
-                        <h2 className="text-gray-400">Dev Backend</h2>
-                        <section className="flex flex-row mt-7 items-center">
+                        <h2 className="text-gray-500 text-lg">Dev Backend</h2>
+                        <section className="flex flex-row mt-7 items-center max-md:flex-col">
                             {
                                 skillsSoftware.backend.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
                             }
                         </section>
-                        <h2 className="text-gray-400">Control de Versiones</h2>
-                        <section className="flex flex-row mt-7 items-center">
+                        <h2 className="text-gray-500 text-lg">Control de Versiones</h2>
+                        <section className="flex flex-row mt-7 items-center max-md:flex-col">
                             {
                                 skillsSoftware.version.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
                             }
                         </section>
-                        <h2 className="text-gray-400">BD Relacionales</h2>
-                        <section className="flex flex-row mt-7 items-center">
+                        <h2 className="text-gray-500 text-lg">BD Relacionales</h2>
+                        <section className="flex flex-row mt-7 items-center max-md:flex-col">
                             {
                                 skillsSoftware.dbrelacional.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
                             }
                         </section>
-                        <h2 className="text-gray-400">BD No Relacionales</h2>
-                        <section className="flex flex-row mt-7 items-center">
+                        <h2 className="text-gray-500 text-lg">BD No Relacionales</h2>
+                        <section className="flex flex-row mt-7 items-center max-md:flex-col">
                             {
                                 skillsSoftware.dbnorelacional.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
                             }
                         </section>
-                        <h2 className="text-gray-400">Cloud</h2>
-                        <section className="flex flex-row mt-7 items-center">
+                        <h2 className="text-gray-500 text-lg">Cloud</h2>
+                        <section className="flex flex-row mt-7 items-center max-md:flex-col">
                             {
                                 skillsSoftware.cloud.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
                             }
                         </section>
                     </>
                     : 
-                    <section className="flex flex-row mt-7 items-center">
+                    <section className="flex flex-row mt-7 items-center max-md:flex-col">
                         {
                             skillsSoftware.others.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
                         }

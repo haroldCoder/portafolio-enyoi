@@ -42,7 +42,7 @@ export default function Home(props) {
                     </div>
                 </div>
                 <div className='block max-sm:mt-16 mt-14 md:mt-10'>
-                    <h2 className='text-[#747474] max-sm:text-lg max-lg:text-xl'>Soy Harold Castaño Alvarez, apasionado por la programación y las nuevas tecnologías. Me dedico al desarrollo e innovación de aplicaciones que satisfagan las necesidades de los clientes.</h2>
+                    <h2 className='text-[#747474] max-sm:text-lg max-lg:text-xl'>Soy Harold Castaño Alvarez, Maestro del manejo del estres, el pensamiento computacional y la logica. Me dedico al desarrollo e innovación de aplicaciones que satisfagan las necesidades de los clientes.</h2>
                 </div>
             </div>
         </div>
