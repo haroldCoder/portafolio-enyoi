@@ -42,7 +42,7 @@ export default function Projects(props) {
                     y como método de pago se implementó una franja de pago para facilitar las transacciones.
                     Además, para la gestión de la base de datos se utilizó Supabase, lo que garantiza una alta disponibilidad y escalabilidad de la aplicación.
                     En resumen, Koderx Sales es una plataforma confiable y eficiente para realizar transacciones comerciales en línea de manera rápida y segura.`,
-            "link": "https://sales-koderx.netlify.app",
+            "link": "https://sales-koderx.vercel.app/",
             "github": "https://github.com/haroldCoder/Sales",
             "image": sales
         },
