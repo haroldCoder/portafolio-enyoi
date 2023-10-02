@@ -11,6 +11,7 @@ import butacaventura from '../assets/butacaventura.jpg';
 import movil from '../assets/App-movil.mp4'
 import xiaomi3d from '../assets/xiaomi-3d.png'
 import vipkoderx from '../assets/vipkoderx.png'
+import ecommerce2023 from '../assets/ecommerce2023.png'
 
 export default function Projects(props) {
     props.nav("Proyectos")
@@ -130,6 +131,16 @@ export default function Projects(props) {
             "github": "https://github.com/haroldCoder/nextjs-stripe",
             "image": vipkoderx,
             "link": "https://nextjs-stripe-five.vercel.app/"
+        },
+        {
+            "name": "Ecommerce-koderx-2023",
+            "descript": `
+            Esta es una aplicación de compras y ventas más actualizada, con nuevas tecnologías y una mejor implementación de patrones de diseño. Además,
+            cuenta con una sólida implementación de programación orientada a objetos en el backend. Aplicamos todo el poder del UI/UX para brindar una experiencia de usuario mejorada.
+            También utilizamos la biblioteca Clerk para autenticar a los usuarios y una base de datos no relacional, como MongoDB, para almacenar los productos.`,
+            "github": "https://github.com/haroldCoder/Ecommerce-koderx",
+            "image": ecommerce2023,
+            "link": "https://ecommerce-koderx.netlify.app/"
         }
     ]
   return (
