@@ -20,7 +20,9 @@ import azure from '../assets/img/azure.png';
 import google from '../assets/img/google-cloud.png';
 import git from '../assets/img/git.png';
 import github from '../assets/img/github.png';
-import gitlab from '../assets/img/gitlab.png'; {/* se importaran todas las imagenes, para que puedan ser utilizadas en los arreglos de objetos */ }
+import gitlab from '../assets/img/gitlab.png'; 
+import selenium from '../assets/img/selenium.png';
+{/* se importaran todas las imagenes, para que puedan ser utilizadas en los arreglos de objetos */ }
 
 
 export const skillsSoftware = {
@@ -142,6 +144,14 @@ export const skillsSoftware = {
             "cover": gitlab,
             "type": "fullstack",
             "progress": 90
+        }
+    ],
+    auto: [
+        {
+            "name": "SELENIUM & JAVA",
+            "cover": selenium,
+            "type": "fullstack",
+            "progress": 70
         }
     ],
     others: [
