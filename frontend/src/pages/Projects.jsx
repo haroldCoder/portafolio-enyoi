@@ -12,6 +12,7 @@ import movil from '../assets/App-movil.mp4'
 import xiaomi3d from '../assets/xiaomi-3d.png'
 import vipkoderx from '../assets/vipkoderx.png'
 import ecommerce2023 from '../assets/ecommerce2023.png'
+import shop3d from '../assets/shop3dkoderx.png'
 
 export default function Projects(props) {
     props.nav("Proyectos")
@@ -141,6 +142,18 @@ export default function Projects(props) {
             "github": "https://github.com/haroldCoder/Ecommerce-koderx",
             "image": ecommerce2023,
             "link": "https://ecommerce-koderx.netlify.app/"
+        },
+        {
+            "name": "Shop3d-koderx",
+            "descript": `
+            Esta aplicación facilita la compra y venta de objetos 3D, y además está en proceso de implementar la capacidad de crear modelos 3D y enviarlos a fabricar.
+            La aplicación fue desarrollada utilizando la arquitectura de websockets y API REST, aunque en producción solo se encuentra con API REST. 
+            Se aplicaron principios de Programación Orientada a Objetos (OOP) y se emplearon patrones de diseño.
+            En cuanto a los frameworks, se utilizó Next.js para el frontend y Express.js para el backend, ambos implementados con TypeScript. La base de datos se construyó utilizando MySQL y MongoDB.
+            `,
+            "github": "https://github.com/haroldCoder/shop3d-koderx",
+            "image": shop3d,
+            "link": "https://shop3d-koderx-dev.vercel.app/"
         }
     ]
   return (

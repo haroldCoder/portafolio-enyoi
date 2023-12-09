@@ -95,6 +95,12 @@ function Skills(props){
                                 skillsSoftware.auto.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
                             }
                         </section>
+                        <h2 className="text-gray-500 text-lg">ORMS</h2>
+                        <section className="flex flex-row mt-7 items-center max-md:flex-col">
+                            {
+                                skillsSoftware.orm.map(e=>(<Card name={e.name} progress={e.progress} cover={e.cover} key={e.name} />))
+                            }
+                        </section>
                     </>
                     : 
                     <section className="flex flex-row mt-7 items-center max-md:flex-col">

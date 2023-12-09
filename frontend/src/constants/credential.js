@@ -8,7 +8,8 @@ import cpp from '../assets/img/cpp.png'
 import net from '../assets/img/.net-framework.png'
 import java from '../assets/img/java.png'
 import python from '../assets/img/python.png'
-import sql from '../assets/img/sql.png'
+import prisma from '../assets/img/prisma.png'
+import sequelize from '../assets/img/sqlize.png'
 import c from '../assets/img/c.png'; 
 import node from '../assets/img/nodejs.png';
 import laravel from '../assets/img/laravel.png';
@@ -22,6 +23,7 @@ import git from '../assets/img/git.png';
 import github from '../assets/img/github.png';
 import gitlab from '../assets/img/gitlab.png'; 
 import selenium from '../assets/img/selenium.png';
+import jest from '../assets/img/jest.png'
 {/* se importaran todas las imagenes, para que puedan ser utilizadas en los arreglos de objetos */ }
 
 
@@ -152,6 +154,26 @@ export const skillsSoftware = {
             "cover": selenium,
             "type": "fullstack",
             "progress": 70
+        }, 
+        {
+            "name": "JEST & SUPERTEST",
+            "cover": jest,
+            "type": "fullstack",
+            "progress": 40
+        }
+    ],
+    orm: [
+        {
+            "name": "PRISMA",
+            "cover": prisma,
+            "type": "fullstack",
+            "progress": 50
+        },
+        {
+            "name": "SEQUELIZE",
+            "cover": sequelize,
+            "type": "fullstack",
+            "progress": 60
         }
     ],
     others: [
