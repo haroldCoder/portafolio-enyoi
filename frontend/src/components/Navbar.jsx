@@ -4,14 +4,14 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search'; //utilizamos los icones de material UI
 import { Link, Navigate } from "react-router-dom"; // utilizamos Link de react-router-dom para navegar entre las diferentes paginas
 import Mode from './Mode';
 import { Button } from '@mui/material';
 import SearchSystem from './SearchSystem';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 
 export default function Navbar(props) {
@@ -87,7 +87,7 @@ export default function Navbar(props) {
               sx={{ mr: 2 }}
               onClick={(e)=>{setOpen(!open)}}
             >
-              <MenuIcon />
+              {open ? <ArrowCircleLeftIcon style={{fontSize: "34px"}} /> : <ArrowCircleRightIcon style={{fontSize: "34px"}} />}
             </IconButton>
             <div className={`flex nav justify-between w-[100%]  max-[649px]:flex-col`} > {/* si la prop de app.js, open es igual a true el padding izquierdo sera de 16.em y el width sera el 40% del tamaño total */}
               {open == false ? props.nav : text.map(e=>(
