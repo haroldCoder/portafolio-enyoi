@@ -78,7 +78,7 @@ export default function Navbar(props) {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar className='sm:p-3' style={{background: `${props.mode ? '#000' : '#1774ff'}`}} position="static">
         <Toolbar className='flex max-lg:justify-between max-md:items-start'>
-        <div className={`${open ? 'max-md:flex-col items-start lg:pr-16 max-lg:pr-6 2xl:w-[40%] max-sm:w-[50%] xl:w-[60%]' : 'flex-row'}  xl:flex-row flex sm:w-[100%]`} style={{transition: "0.6s ease"}}>
+        <div className={`items-end ${open ? 'max-md:flex-col lg:pr-16 max-lg:pr-6 2xl:w-[50%] max-sm:w-[50%] xl:w-[60%]' : 'flex-row items-center'}  xl:flex-row flex sm:w-[100%]`} style={{transition: "0.6s ease"}}>
             <IconButton
               size="large"
               edge="start"
@@ -87,7 +87,7 @@ export default function Navbar(props) {
               sx={{ mr: 2 }}
               onClick={(e)=>{setOpen(!open)}}
             >
-              {open ? <ArrowCircleLeftIcon style={{fontSize: "34px"}} /> : <ArrowCircleRightIcon style={{fontSize: "34px"}} />}
+              {!open ? <ArrowCircleLeftIcon style={{fontSize: "34px"}} /> : <ArrowCircleRightIcon style={{fontSize: "34px"}} />}
             </IconButton>
             <div className={`flex nav justify-between w-[100%]  max-[649px]:flex-col`} > {/* si la prop de app.js, open es igual a true el padding izquierdo sera de 16.em y el width sera el 40% del tamaño total */}
               {open == false ? props.nav : text.map(e=>(
