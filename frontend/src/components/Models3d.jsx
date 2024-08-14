@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "react-three-fiber";
 
 export default function Models3d({path}) {
-  const { scene } = useGLTF("/public/animations/scene/scene.gltf");
+  const { scene } = useGLTF("/animations/scene/scene.gltf");
   const modelRef = useRef();
   useFrame(() => {
     if (modelRef.current) {
