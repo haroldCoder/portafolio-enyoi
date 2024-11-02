@@ -64,7 +64,7 @@ export default function Projects(props) {
             "descript": ` Airbnb-clone es una aplicación de entrenamiento que se enfoca en replicar el diseño y la interfaz de la plataforma original sin intentar competir con ella.
                         Su objetivo es proporcionar a los usuarios un ambiente de práctica donde puedan explorar la funcionalidad de la página web real de Airbnb.
                         A través de la aplicación de entrenamiento, los usuarios pueden aprender a navegar por la interfaz y descubrir las características clave que hacen que Airbnb sea una plataforma tan popular. Desde buscar alojamientos hasta reservar habitaciones, la aplicación de entrenamiento de Airbnb es una herramienta útil para aquellos que desean familiarizarse con la plataforma antes de utilizarla en la vida real.`,
-            "link": "https://airbnb-clone-koderx.netlify.app/",
+            "link": "https://airbnb-clone-koderx.vercel.app/",
             "github": "https://github.com/haroldCoder/Airbnb-Clone",
             "image": airbnb_clone
         },
